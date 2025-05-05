@@ -1,4 +1,3 @@
--- FABRICATED VALUES!!!
 local type_custom = typeof
 if not LPH_OBFUSCATED then
 	LPH_JIT = function(...)
@@ -32,10 +31,10 @@ if not LPH_OBFUSCATED then
     SWG_DiscordID = 1337
     SWG_Private = true
     SWG_Dev = false
-    SWG_Version = "dev"
-    SWG_Title = 'roblox gay sex gui %s - %s'--'$$$  swimhub<font color="rgb(166, 0, 255)">.xyz</font> %s - %s  $$$'
-    SWG_ShortName = 'dev'
-    SWG_FullName = 'indev build'
+    SWG_Version = "free"
+    SWG_Title = 'free swimhub.xyz %s - %s | discord.gg/priv9'
+    SWG_ShortName = 'free'
+    SWG_FullName = 'ts'
     SWG_FFA = false
 end;
 --- FABRICATED VALUES END!!!
@@ -53,12 +52,8 @@ local Camera = workspace.CurrentCamera
 
 local function getfile(name)
     local repo = "https://raw.githubusercontent.com/SWIMHUBISWIMMING/swimhub/main/"
-    local success, content = pcall(request, {Url = repo..name, Method = "GET"})
-    if success and content.StatusCode == 200 then
-        return content.Body
-    else
-        return print("getfile returned error \""..content.."\"")
-    end
+    local success, content = pcall(game.HttpGet, game, repo..name)
+    if success then return content else return print("getfile returned error \""..content.."\"") end
 end
 local function isswimhubfile(file)
     return isfile("swimhub/new/files/"..file)
@@ -871,13 +866,13 @@ local aimbot = {
 local function get_closest_target(usefov, fov_size)
     local part, spos = nil, nil
     local maximum_distance = usefov and fov_size or math.huge
-    local mousepos = _Vector2new(Mouse.X, Mouse.Y)
+    local center_screen = _Vector2new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
     LPH_JIT_MAX(function()
         for _, character in validcharacters do
             local hitpart = _FindFirstChild(character, "LowerTorso")
             if hitpart then
                 local position, onscreen = _WorldToViewportPoint(Camera, hitpart.Position)
-                local distance = (_Vector2new(position.X, position.Y) - mousepos).Magnitude
+                local distance = (_Vector2new(position.X, position.Y) - center_screen).Magnitude
                 if (usefov and onscreen or not usefov) and distance < maximum_distance then
                     part = hitpart
                     maximum_distance = distance
@@ -961,13 +956,13 @@ do
         end
         if target and spos then
             snaplinedrawing.Visible = snapline
-            snaplinedrawing.From = _Vector2new(Mouse.X, Mouse.Y + GuiInset.Y)
+            snaplinedrawing.From = _Vector2new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
             snaplinedrawing.To = spos
         else
             snaplinedrawing.Visible = false
         end
-        CircleOutline.Position = _Vector2new(Mouse.X, Mouse.Y + GuiInset.Y)
-        CircleInline.Position = _Vector2new(Mouse.X, Mouse.Y + GuiInset.Y)
+        CircleOutline.Position = _Vector2new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+        CircleInline.Position = _Vector2new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
     end)
     do
         local function addtovc(obj)
@@ -1797,9 +1792,9 @@ do
                         x1 = { pos.X + (math.cos(angle + (index * (math.pi / 2))) * (cursor.Radius + 1)), pos
                         .X +
                         (math.cos(angle + (index * (math.pi / 2))) * ((cursor.Radius - 20 + 1) - (cursor.TheGap and ((cursor.Radius - 20 + 1) / cursor.Gap) or ((cursor.Radius - 20 + 1) - cursor.Gap)))) }
-                        y1 = { pos.Y + (math.sin(angle + (index * (math.pi / 2))) * (cursor.Radius + 1)), pos
+                        y1 = { _Vector2new(pos.Y + (math.sin(angle + (index * (math.pi / 2))) * (cursor.Radius + 1)), pos
                         .Y +
-                        (math.sin(angle + (index * (math.pi / 2))) * ((cursor.Radius - 20 + 1) - (cursor.TheGap and ((cursor.Radius - 20 + 1) / cursor.Gap) or ((cursor.Radius - 20 + 1) - cursor.Gap)))) }
+                        (math.sin(angle + (index * (math.pi / 2))) * ((cursor.Radius - 20 + 1) - (cursor.TheGap and ((cursor.Radius - 20 + 1) / cursor.Gap) or ((cursor.Radius - 20 + 1) - cursor.Gap))))) }
                     end
                     --
                     line[1].Visible = true
