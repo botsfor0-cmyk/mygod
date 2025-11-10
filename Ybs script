@@ -48,10 +48,10 @@ tab.newButton("Skeleton Esp", "", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/Skeleton%20esp%20v5",true))()
 end)
 -- Dot CrossHair
-tab.newButton("Dot-CrossHair", "", function()
+tab.newButton("Dot CrossHair", "", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/Name",true))()
 -- Plus crosshair
-tab.newButton("Plus-CrossHair", "", function()
+tab.newButton("Plus CrossHair", "", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/Name",true))()
 -- Name
 loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/Name",true))()
