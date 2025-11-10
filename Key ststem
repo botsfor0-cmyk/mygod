@@ -66,7 +66,7 @@ local function enterKey()
     local correctKey = "keyhere"
 
     if userInputKey == correctKey then
-        local scriptURL = "loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/YBSWORLD%20PAID%20OBFUSCATED",true))()"
+        local scriptURL = ""
         local success, result = pcall(function()
             return loadstring(game:HttpGet(https://github.com/botsfor0-cmyk/mygod/blob/main/YBSWORLD%20PAID%20OBFUSCATED))()
         end)
