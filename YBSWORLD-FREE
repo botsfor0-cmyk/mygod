@@ -1,6 +1,6 @@
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 --
-local window = DrRayLibrary:Load("Vercore.xyz v5 paid", "Default")
+local window = DrRayLibrary:Load("YBSWORLD-FREE", "Default")
 --
 local tab = DrRayLibrary.newTab("⚔️Combat⚔️", "ImageIdHere")
 -- hitbox
