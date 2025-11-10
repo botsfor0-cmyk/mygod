@@ -1,32 +1,18 @@
-for _, line in ipairs({
-"░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░░▒▓████████▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░ ",
-"░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░ ",
-" ░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░    ░▒▓██▓▒░  ",
-" ░▒▓█▓▒▒▓█▓▒░░▒▓██████▓▒░ ░▒▓███████▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓██████▓▒░         ░▒▓██████▓▒░ ░▒▓██████▓▒░   ░▒▓██▓▒",
-"░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░    ░▒▓██▓▒░", 
-" ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓██▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░",
-" ░▒▓██▓▒░  ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓██▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓████████▓▒░ "
-}) do
-    print(line)
-end
-local TextLabel = Drawing.new("Text")
-TextLabel.Text = "YBSWORLD - PAID "
-TextLabel.Size = 24
-TextLabel.Center = true
-TextLabel.Outline = true
-TextLabel.Visible = true
+local viewport = game:GetService("Workspace").CurrentCamera.ViewportSize
+local center = Vector2.new(viewport.X / 2, viewport.Y / 2)
 
-local viewportSize = game:GetService("Workspace").CurrentCamera.ViewportSize
-TextLabel.Position = Vector2.new(viewportSize.X / 2, 15)
+local centerDot = Drawing.new("Circle")
+centerDot.Visible = true
+centerDot.Color = Color3.fromRGB(50, 205, 50)
+centerDot.Thickness = 1
+centerDot.Filled = true
+centerDot.Radius = 2
+centerDot.Position = center
 
-local RunService = game:GetService("RunService")
-local hue = 0
-
-RunService.RenderStepped:Connect(function()
-    hue = (hue + 0.01) % 1
-    local color = Color3.fromHSV(hue, 1, 1)
-    TextLabel.Color = color
-    
-    local newViewportSize = game:GetService("Workspace").CurrentCamera.ViewportSize
-    TextLabel.Position = Vector2.new(newViewportSize.X / 2, 15)
-end)
+local fovCircle = Drawing.new("Circle")
+fovCircle.Visible = true
+fovCircle.Color = Color3.fromRGB(255, 255, 255)
+fovCircle.Thickness = 1
+fovCircle.Filled = false
+fovCircle.Radius = 25
+fovCircle.Position = center
