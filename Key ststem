@@ -63,10 +63,10 @@ end
 
 local function enterKey()
     local userInputKey = textBox.Text
-    local correctKey = "keyhere"
+    local correctKey = "YBSWORLD"
 
     if userInputKey == correctKey then
-        local scriptURL = "scriptlink"
+        local scriptURL = "loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/YBSWORLD%20PAID%20OBFUSCATED",true))()"
         local success, result = pcall(function()
             return loadstring(game:HttpGet(scriptURL))()
         end)
