@@ -1,5 +1,5 @@
 for _, line in ipairs({
-"YBSWORLD-FREE EXECUTED-WORKING  ",
+"YBSWORLD-FREE EXECUTED-WORKING ✅ ",
 }) do
     print(line)
 end
