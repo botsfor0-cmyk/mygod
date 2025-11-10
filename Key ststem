@@ -55,7 +55,7 @@ getKeyButton.MouseButton1Click:Connect(setClipboardWithURL)
 
 local function sendNotification(title, text, duration)
     game.StarterGui:SetCore("SendNotification", {
-        Title = YBSWORLD;
+        Title = Title;
         Text = text;
         Duration = duration;
     })
