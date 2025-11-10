@@ -3,6 +3,10 @@ local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local window = DrRayLibrary:Load("YBSWORLD.PAID", "Default")
 --
 local tab = DrRayLibrary.newTab("⚔️Combat⚔️", "ImageIdHere")
+-- SilentAim
+tab.newButton("SilentAim", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pumpuma/UKI/refs/heads/main/bullet%20tracking.txt"))()
+end)
 -- hitbox
 tab.newButton("Hitbox", "", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/V5%20hitbox",true))()
@@ -32,10 +36,6 @@ end)
 -- no cooldown
 tab.newButton("No cooldown", "MiningDrill", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/Mine%20speed%20v5",true))()
-end)
--- SilentAim
-tab.newButton("SilentAim", "", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Pumpuma/UKI/refs/heads/main/bullet%20tracking.txt"))()
 end)
 local tab = DrRayLibrary.newTab("👀Visuals 1👀", "ImageIdHere")
 -- Esp
