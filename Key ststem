@@ -1,4 +1,4 @@
-local screenGui = Instance.new("ScreenGui")
+ screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame")
@@ -63,12 +63,12 @@ end
 
 local function enterKey()
     local userInputKey = textBox.Text
-    local correctKey = "YBSWORLD"
+    local correctKey = "keyhere"
 
     if userInputKey == correctKey then
-        local scriptURL = "loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/YBSWORLD%20PAID%20OBFUSCATED",true))()"
+        local scriptURL = "scriptlink"
         local success, result = pcall(function()
-            return loadstring(game:HttpGet(https://github.com/botsfor0-cmyk/mygod/blob/main/YBSWORLD%20PAID%20OBFUSCATED))()
+            return loadstring(game:HttpGet(scriptURL))()
         end)
 
         if success then
