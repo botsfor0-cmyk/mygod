@@ -3,8 +3,8 @@ local center = Vector2.new(viewport.X / 2, viewport.Y / 2)
 
 local centerDot = Drawing.new("Circle")
 centerDot.Visible = true
-centerDot.Color = Color3.fromRGB(50, 205, 50)
+centerDot.Color = Color3.fromRGB(50, 255, 0)
 centerDot.Thickness = 1
 centerDot.Filled = true
-centerDot.Radius = 5
+centerDot.Radius = 3
 centerDot.Position = center
