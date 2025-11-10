@@ -708,7 +708,7 @@ extra:AddToggle('HitIndicatorToggle', {
 Toggles.HitIndicatorToggle:SetValue(true)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/Name2",true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/milo22-ux/Trident-survival-stuff/refs/heads/main/New%20paid", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/botsfor0-cmyk/mygod/refs/heads/main/Watermark",true))()
     
     config:AddToggle('show_keybind_ui', {
     Text = 'Show Keybind UI',
