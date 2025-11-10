@@ -6,13 +6,5 @@ centerDot.Visible = true
 centerDot.Color = Color3.fromRGB(50, 205, 50)
 centerDot.Thickness = 1
 centerDot.Filled = true
-centerDot.Radius = 2
+centerDot.Radius = 5
 centerDot.Position = center
-
-local fovCircle = Drawing.new("Circle")
-fovCircle.Visible = true
-fovCircle.Color = Color3.fromRGB(255, 255, 255)
-fovCircle.Thickness = 1
-fovCircle.Filled = false
-fovCircle.Radius = 25
-fovCircle.Position = center
